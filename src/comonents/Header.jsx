@@ -2,6 +2,10 @@ import { useContext, useState } from "react";
 import logo from "../assets/logo.svg";
 import CartDetails from "./cine/CartDetails";
 import { MovieContext, ThemeContext } from "../Context";
+import ring from "../assets/ring.svg";
+import sun from "../assets/icons/sun.svg";
+import moon from "../assets/icons/moon.svg";
+import cart from "../assets/shopping-cart.svg";
 export default function Header() {
   const [showCart, setShowCart] = useState(false);
   const handleCloseCart = () => setShowCart(!showCart);
@@ -22,7 +26,7 @@ export default function Header() {
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src="./assets/ring.svg" width="24" height="24" alt="" />
+              <img src={ring} width="24" height="24" alt="" />
             </a>
           </li>
           <li>
@@ -31,11 +35,7 @@ export default function Header() {
               href="#"
             >
               <img
-                src={
-                  darkMode
-                    ? "../assets/icons/sun.svg"
-                    : "./assets/icons/moon.svg"
-                }
+                src={darkMode ? sun : moon}
                 width="24"
                 height="24"
                 alt=""
@@ -49,7 +49,7 @@ export default function Header() {
               href="#"
             >
               <img
-                src="./assets/shopping-cart.svg"
+                src={cart}
                 width="24"
                 height="24"
                 alt=""

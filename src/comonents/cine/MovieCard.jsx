@@ -5,6 +5,7 @@ import Rating from "./Rating";
 import MovieDetailsModal from "./MovieDetailsModal";
 import { MovieContext } from "../../Context";
 import { toast } from "react-toastify";
+import tag from "../../assets/tag.svg";
 
 export default function MovieCard({ movie }) {
   const [showModal, setShowModal] = useState(false);
@@ -65,7 +66,7 @@ export default function MovieCard({ movie }) {
               href="#"
               onClick={(e) => handleAddToCart(e, movie)}
             >
-              <img src="./assets/tag.svg" alt="" />
+              <img src={tag} alt="" />
               <span>${movie.price} | Add to Cart</span>
             </a>
           </figcaption>

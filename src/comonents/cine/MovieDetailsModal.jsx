@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { getImgUrl } from "../../utils/cine-utility";
 import { MovieContext } from "../../Context";
 import { toast } from "react-toastify";
+import tag from "../../assets/tag.svg";
 export default function MovieDetailsModal({ movie, onClose }) {
   const { cartData, setCartData } = useContext(MovieContext);
   const onCartAdd = (e, movie) => {
@@ -50,7 +51,7 @@ export default function MovieDetailsModal({ movie, onClose }) {
                 href="#"
                 onClick={(e) => onCartAdd(e, movie)}
               >
-                <img src="./assets/tag.svg" alt="" />
+                <img src={tag} alt="" />
                 <span>${movie.price} | Add to Cart</span>
               </a>
               <a

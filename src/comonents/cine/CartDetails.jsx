@@ -3,6 +3,7 @@ import { MovieContext } from "../../Context";
 import Delete from "../../assets/delete.svg";
 import { getImgUrl } from "../../utils/cine-utility";
 import { toast } from "react-toastify";
+import checkout from "../../assets/icons/checkout.svg";
 
 export default function CartDetails({ onClose }) {
   const { state, dispatch } = useContext(MovieContext);
@@ -63,12 +64,7 @@ export default function CartDetails({ onClose }) {
               className="rounded-md p-2 md:px-4 inline-flex items-center space-x-2 bg-primary text-[#171923] text-sm"
               href="#"
             >
-              <img
-                src="./assets/icons/checkout.svg"
-                width="24"
-                height="24"
-                alt=""
-              />
+              <img src={checkout} width="24" height="24" alt="" />
               <span>Checkout</span>
             </a>
             <a
